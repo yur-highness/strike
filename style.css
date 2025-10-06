@@ -198,8 +198,9 @@ span:before {
   }
 }
 
-
-/* hero section */
+/*========================================================= 
+hero section 
+===========================================================*/
 .hero {
   display: flex;
   flex-direction: row;
@@ -545,13 +546,10 @@ article {
     padding: 2rem 5%;
   }
 
-  .about h2,
+  
   .courses h2 {
     font-size: 2.5rem;
   }
-
-
-
   
   .course {
     flex: none;
@@ -563,7 +561,9 @@ article {
 
 
 
-/* marquee styles */
+/*================================================= 
+marquee styles 
+====================================================*/
 .marquee-container {
   --s: 150px; /* size of the logo */
   --d: 8s; /* animation duration*/
@@ -601,7 +601,9 @@ img {
 
 
 
-/* Accordion styles */
+/* ======================================================
+Accordion styles 
+=========================================================*/
 .tab {
   position: relative;
 }
@@ -735,10 +737,10 @@ video {
   padding: 2em 4em;
 }
 
-/* ======
+/* ===================================================
 courses section
 General Image Grid Styles
-===== */
+======================================================*/
 
 .courses {
   padding: 4rem 10%;
@@ -800,10 +802,9 @@ General Image Grid Styles
   width: 100%;
 }
 
-/* ======
+/* ===============================================
 courses section
-3D Flipping Grid Images
-====== */
+================================================== */
 .flip-container {
   width: 30%;
   display: inline-block;
@@ -900,7 +901,9 @@ courses section
 }
 
 
-/* contact section css */
+/* =============================================
+contact section css 
+================================================*/
 .login-section {
   position: relative;
   display: flex;
@@ -1152,7 +1155,9 @@ courses section
 
 
 
-/* footer-section css */
+/*=================================================== 
+footer-section css 
+=====================================================*/
 
 footer {
   /* background-color: #333; */
@@ -1748,7 +1753,7 @@ a.btn-flip:before {
 
 a.btn-flip:after {
   background: #adadaf;
-  color: #e0e0e4;
+  color: black;
   opacity: 0;
   transform: translateY(-50%) rotateX(90deg);
   content: attr(data-back);
@@ -1767,7 +1772,7 @@ a.btn-flip:hover:after {
 
 /* Background fill effect */
 a.btn-flip::after {
-  background-color: #ff003b;
+  background-color: #adf821;
   z-index: 0;
   width: 0;
   transition: all 0.35s;
@@ -1777,5 +1782,7 @@ a.btn-flip:hover::after {
   width: 100%;
 }
 
-
+.form{
+  margin-top: 20%;
+}
 
