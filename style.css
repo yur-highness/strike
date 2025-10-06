@@ -210,6 +210,9 @@ span:before {
   position: relative;
   overflow-x: hidden;
 }
+.card-content .hero-title{
+    text-transform: lowercase;
+}
 
 .hero-container-1 {
   flex: 1;
@@ -229,6 +232,7 @@ span:before {
   font-weight: 500;
   color: #555;
   margin-bottom: 2rem;
+
 }
 
 .hero-container-1 .btn-tag {
@@ -256,6 +260,34 @@ span:before {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.shine{
+  font-weight: 700;
+  text-align: center;
+  font-size: 40px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  position: relative;
+  left: 20%;
+  top: 0;
+}
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
 }
 @keyframes lights {
   0% {
@@ -599,7 +631,7 @@ img {
 .tab__label,
 .tab__close {
   display: flex;
-  color: rgb(158, 239, 133);
+  color: #42c58a;
   background: #74933f00;
   cursor: pointer;
 }
@@ -1416,14 +1448,14 @@ footer p {
 #f-container {
   color: #42c58a;
   text-transform: uppercase;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: bold;
-  padding-top: 200px;
+  padding-top: 150px;
   margin-left: 0;
   position: fixed;
-  width: 12%;
+  width: 10%;
   bottom: 1%;
-  left: 0%;
+  right: 0%;
   display: block;
 }
 .footer-icons{
