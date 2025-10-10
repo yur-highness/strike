@@ -46,7 +46,44 @@
           </li>
         </ul>
       </nav>
-      
+      <div class="chat-wrapper">
+  <!-- Chatbot Button -->
+  <button class="chat-toggle" sytle="z-index: 9999;" aria-controls="chatbox" aria-expanded="false"aria-haspopup="dialog" aria-expanded="false">
+    ⚡
+  </button>
+
+  <!-- Chatbox Panel -->
+  <div class="chatbox">
+    <div class="chat-header">
+      <h2>STRIKEbot</h2>
+      <p>Powered by Meta-Llama 3.1</p>
+    </div>
+
+    <div class="chat-messages">
+      <div class="message ai">
+        <b class="avatar">🤖</b>
+        <p><strong>AI:</strong> Hi, how can I help you today?</p>
+      </div>
+      <div class="message user">
+        <b class="avatar">🧑</b>
+        <p><strong>You:</strong> fewafef</p>
+      </div>
+      <div class="message ai" >
+        <b class="avatar">🤖</b>
+        <p><strong>AI:</strong> Sorry, I couldn't find any information in the documentation about that.</p>
+      </div>
+      <div class="chat-input-container">
+             <form class="chat-input" style="margin-top: 5%;">
+      <input type="text" placeholder="Type your message" />
+      <button type="submit">Send</button>
+    </form>
+      </div>
+     
+    </div>
+
+
+  </div>
+</div>
     </header>
 
     <!-- hero section -->
@@ -61,6 +98,7 @@
             <b>ENROLL NOW</b>
           </div>
         </div>
+        
       </div>
       <div class="hero-container-2">
         <section class="code-lock">
@@ -91,7 +129,7 @@
 
     <!-- tech stack section -->
     <section class="tech-stack">
-      <h2 style="text-align: center; color: #42c58a">TECH STACK</h2>
+      <h2 style="text-align: center; color: #42c58a;margin-bottom: 5%;" class="autoShow">TECH STACK</h2>
 
       <div
         class="marquee-container"
@@ -105,11 +143,11 @@
         <img src="./images/ai-logo.webp" />
       </div>
     </section>
-
+   
     <!-- courses section -->
-    <section id="courses" class="courses">
+    <section id="courses" class="courses autoShow">
       <div class="wrapper">
-  <h2 style="text-align: center;">Courses</h2>
+  <h2 style="text-align: center; margin-bottom: 5%;" class="autoShow">Courses</h2>
   <div class="cols">
 			<div class="col" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
@@ -510,8 +548,8 @@
     </section>
 <!-- Instructor section -->
     <section class="instructor-sec">
-        <h2 style="text-align: center; color: #42c58a">INSTRUCTORS</h2>
-      <div class="ins-container">
+        <h2 style="text-align: center; color: #42c58a;margin-bottom: 5%;"class="autoShow">INSTRUCTORS</h2>
+      <div class="ins-container autoShow">
           <div class="ins-card">
     <div class="align">
         <b class="red"></b>
@@ -545,8 +583,8 @@
     </section>
 
     <!-- Accordion section 1 -->
-    <section class="accordion">
-      <h2 style="text-align: center">F.A.Qs</h2>
+    <section class="accordion autoShow">
+      <h2 style="text-align: center;" >F.A.Qs</h2>
       <div class="tab">
         <input type="checkbox" name="accordion-1" id="cb1" checked />
         <label for="cb1" class="tab__label"
@@ -565,7 +603,7 @@
       </div>
     </section>
 <!-- Accordion section 2 -->
-    <section class="accordion" id="contactUs">
+    <section class="accordion autoShow" id="contactUs">
       <div class="tab">
         <input type="checkbox" name="accordion-1" id="cb4" />
         <label for="cb4" class="tab__label"
@@ -583,9 +621,26 @@
         </div>
       </div>
     </section>
+     <!-- newsletter section -->
+      <section class="newletter autoShow">
+  
+<form class="form-newsletter">
+  <p class="title">Subscribe to our newsletter.</p>
+  <p class="description" >For more Hackathons and updates</p>
+  <div class="news">
+    <input placeholder="Enter your email" type="email" name="email" id="email-address">
+    <div class="holographic-container new-btn">
+          <div class="holographic-card new-btn">
+            <b>Subscribe</b>
+          </div>
+        </div>
+
+  </div>
+</form>
+      </section>
 
     <!-- contact-us section -->
-    <section class="login-section" >
+    <section class="login-section autoShow" >
       <div class="terminal-loader">
   <div class="terminal-header">
     <div class="terminal-title">For more information</div>
@@ -608,14 +663,16 @@
             <input type="text" name="" required="" />
             <label>Query</label>
           </div>
-          <div class="holographic-container">
+         
+        </form>
+         <div class="holographic-container">
             <div class="holographic-card">
               <p>submit</p>
             </div>
           </div>
-        </form>
       </div>
-      <div class="letter-image">
+      
+      <div class="letter-image autoShow">
         <div class="animated-mail">
           <div class="back-fold"></div>
           <div class="letter">
@@ -635,7 +692,7 @@
     </section>
 
     <!-- footer section -->
-    <section class="footer-section">
+    <section class="footer-section autoShow">
       <footer>
         <div class="footer-5-column">
           <div class="footer-container">
@@ -646,7 +703,7 @@
 
                
               </div>
-              <div class="footer-navbar">
+              <div class="footer-navbar autoShow">
                 <div class="footer-navbar-col">
                   <h5>Solutions</h5>
                   <ul>
@@ -690,16 +747,18 @@
              
                   </div>
                 </div>
-                 <b class="shine"style="align-items: center;">coder army</b>
+                 <b class="shine"style="align-items: center;" >coder army</b>
               </div>
             </div>
             <!-- Footer Navigation End -->
             <div class="footer-copyright hero-title">
               <p>© 2025 techWizard - All Rights Reserved</p>
             </div>
+        
            
           </div>
         </div>
+        
         <!-- Footer End-->
       </footer>
     </section>
