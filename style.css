@@ -870,6 +870,7 @@ courses section
   background: -webkit-linear-gradient(45deg,  #354546 0%,#596a7289 100%);
   background: -o-linear-gradient(45deg,  #399f8c80 0%,#697d86 100%);
   background: linear-gradient(45deg,  #7d94a5bc 0%,#265448c0 100%);
+ 
 }
 
 .front:after{
@@ -886,6 +887,7 @@ courses section
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     border-radius: 10px;
+    color:transparent
 }
 .container:hover .front,
 .container:hover .back{
@@ -894,6 +896,7 @@ courses section
     -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
     transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
     transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    
 }
 
 .back{
@@ -901,6 +904,7 @@ courses section
     top: 0;
     left: 0;
     width: 100%;
+  
 }
 
 .inner{
@@ -918,6 +922,8 @@ courses section
             perspective: inherit;
     z-index: 2;
 }
+
+
 
 .container .back{
     -webkit-transform: rotateY(180deg);
@@ -938,6 +944,7 @@ courses section
           transform: rotateY(0deg);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  
 }
 
 .container:hover .front{
@@ -966,11 +973,7 @@ courses section
   bottom: -.75rem;
 }
 
-.front .inner span{
-  color: rgba(255,255,255,0.7);
-  font-family: 'Montserrat';
-  font-weight: 300;
-}
+
 
 @media screen and (max-width: 64rem){
   .col{
@@ -1126,7 +1129,7 @@ contact section css
   display: flex;
   box-sizing: border-box;
   border: 2px solid #1a1f24;
-  color: #637185;
+  color: #fefefe;
 }
 
 .value:focus,
