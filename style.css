@@ -1197,7 +1197,7 @@ contact section css
     background-color: transparent;
   }
 }
-.login-box {
+.contact-box {
   position: absolute;
   top: 92%;
   left: 50%;
@@ -1213,11 +1213,11 @@ contact section css
 
 
 
-.login-box .user-box {
+.contact-box .user-box {
   position: relative;
 }
 
-.login-box .user-box input {
+.contact-box .user-box input {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -1228,7 +1228,7 @@ contact section css
   outline: none;
   background: transparent;
 }
-.login-box .user-box label {
+.contact-box .user-box label {
   position: absolute;
   top: 0;
   left: 0;
@@ -1239,15 +1239,15 @@ contact section css
   transition: 0.5s;
 }
 
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+.contact-box .user-box input:focus ~ label,
+.contact-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
   color: #42c58a;
   font-size: 12px;
 }
 
-.login-box form a {
+.contact-box form a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -1441,7 +1441,6 @@ footer-section css
 =====================================================*/
 
 footer {
-  /* background-color: #333; */
   color: rgb(244, 227, 227);
   padding: 2rem 10%;
   text-align: center;
@@ -1869,10 +1868,6 @@ footer p {
     width: 50%;
   }
 }
-/* @media all and (max-width: 576px) {
-  .footer-5-column .footer-navbar .footer-navbar-col {
-     width: 100%; 
-  } */
 
 
 /*custom buttons css */
@@ -2150,6 +2145,8 @@ a.btn-flip:hover::after {
   }
 }
 
+
+/*custom animations */
 .autoShow{
   animation: text-apprear both;
   animation-timeline: view();
@@ -2168,7 +2165,10 @@ a.btn-flip:hover::after {
 }
 
 
-
+/* ===========================================================
+chat-bot section css 
+===============================================================
+*/
 .chat-wrapper {
   position: fixed;
   bottom: 1rem;
@@ -2200,7 +2200,7 @@ a.btn-flip:hover::after {
 }
 .chat-toggle:hover {
  background: #aeeec2;
-background: radial-gradient(circle,rgba(174, 238, 194, 1) 4%, rgba(155, 233, 148, 1) 93%);
+ background: radial-gradient(circle,rgba(174, 238, 194, 1) 4%, rgba(155, 233, 148, 1) 93%);
 }
 
 /* Chatbox Panel */
@@ -2579,3 +2579,254 @@ background: radial-gradient(circle,rgba(174, 238, 194, 1) 4%, rgba(155, 233, 148
 }
 
 
+.chat-toggle-login {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: rgb(77, 82, 70);
+  color: rgba(213, 219, 195, 0.996);
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: fixed;
+  left: 1%;
+  top: 90%;
+}
+
+.chatbox-login {
+  position: fixed;
+  bottom: 80px;
+  left: 1%;
+  width: 390px;
+  height: 364px;
+  background: rgba(255, 255, 255, 0.396);
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: none;
+}
+
+@media(max-width:1280px){
+  .chat-toggle-login {
+    width: 65px;
+    height: 65px;
+    font-size: 2.2rem;
+    margin-left: 5%;
+    
+  }
+ 
+}
+
+@media (max-width: 450px){
+ .chatbox-login {
+  position: fixed;
+  bottom: 80px;
+  left: 1%;
+  width: 390px;
+  height: 364px;
+  background: rgba(255, 255, 255, 0);
+
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  display: none;
+}
+}
+
+/* Show login on hover or focus */
+.chat-wrapper:hover .chatbox-login,
+.chat-toggle:focus + .chatbox-login {
+  display: block;
+}
+
+/* ===========================================================*/
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  margin: 20px auto;
+  transform: translate(-50%, -55%);
+  background: rgba(0,0,0,.9);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
+
+@media(max-width:450px){
+  .login-box {
+    width: 300px;
+    padding: 20px;
+    
+  }
+}
+
+.login-box p:first-child {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+}
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 3px
+}
+
+.login-box a:hover {
+  background: #fff;
+  color: #272727;
+  border-radius: 5px;
+}
+
+.login-box a span {
+  position: absolute;
+  display: block;
+}
+
+.login-box a b:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #fff);
+  animation: btn-anim1 1.5s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box a b:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #fff);
+  animation: btn-anim2 1.5s linear infinite;
+  animation-delay: .375s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+
+  50%,100% {
+    top: 100%;
+  }
+}
+
+.login-box a b:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #fff);
+  animation: btn-anim3 1.5s linear infinite;
+  animation-delay: .75s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+
+  50%,100% {
+    right: 100%;
+  }
+}
+
+.login-box a b:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #fff);
+  animation: btn-anim4 1.5s linear infinite;
+  animation-delay: 1.125s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+
+  50%,100% {
+    bottom: 100%;
+  }
+}
+
+.login-box p:last-child {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.login-box a.a2 {
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-box a.a2:hover {
+  background: transparent;
+  color: #aaa;
+  border-radius: 5px;
+}
