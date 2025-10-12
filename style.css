@@ -222,6 +222,7 @@ hero section
   margin-right: 10%;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 @media(max-width: 858px) {
@@ -235,6 +236,7 @@ hero section
     margin-top: 20px;
     width: 70%;
     margin-left: 5%;
+    position: relative;
   }
   .hero-container-2{
     margin-top: 20px;
@@ -303,17 +305,18 @@ hero section
 }
 
 .hero-container-1 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
   color: #333;
-  margin-bottom: 2rem;
+  margin-bottom: 9rem;
 }
 
 .hero-container-1 p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #555;
   margin-bottom: 2rem;
+
 
 }
 
@@ -495,7 +498,9 @@ article {
   gap: 4rem;
   align-items: center;
   justify-content: center;
-  margin-right: 10%;
+  margin-top: 15%;
+
+
 }
 
 .code-lock p {
@@ -1954,7 +1959,7 @@ svg {
   text-align: center;
   align-items: center;
   position: relative;
-  left: 23%;
+  left:22%;
   overflow: hidden;
   border-radius: 15px;
   transition: all 0.5s ease;
@@ -3038,4 +3043,229 @@ chat-bot section css
   }
 }
 
-  
+
+.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 25px 25px 75px rgba(0,0,0,0.55);
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  background: transparent;
+  border: 1px dashed#444;
+  border-radius: 50%;
+  box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
+  inset 5px 5px 35px rgba(0,0,0,0.25);
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px dashed#444;
+  box-shadow: inset -5px -5px 25px rgba(0,0,0,0.25),
+  inset 5px 5px 35px rgba(0,0,0,0.25);
+}
+
+.loader b{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  transform-origin: top left;
+  animation: radar81 2s linear infinite;
+  border-top: 1px dashed #fff;
+}
+
+.loader b::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: seagreen;
+  transform-origin: top left;
+  transform: rotate(-55deg);
+  filter: blur(30px) drop-shadow(20px 20px 20px seagreen);
+}
+
+@keyframes radar81 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 70%;
+  position:absolute;
+  top: 10%;
+  left:0;
+
+
+}
+
+.loader1 {
+  width: 100%;
+}
+
+.hook{
+  background: #fff;
+}
+
+.trace-bg {
+  stroke: #333;
+  stroke-width: 1.8;
+  fill: none;
+}
+
+.trace-flow {
+  stroke-width: 1.8;
+  fill: none;
+  stroke-dasharray: 40 400;
+  stroke-dashoffset: 438;
+  filter: drop-shadow(0 0 6px currentColor);
+  animation: flow 3s cubic-bezier(0.5, 0, 0.9, 1) infinite;
+}
+
+.yellow {
+  stroke: #ffea00;
+  color: #ffea00;
+}
+.blue {
+  stroke: #00ccff;
+  color: #00ccff;
+}
+.green {
+  stroke: #00ff15;
+  color: #00ff15;
+}
+.purple {
+  stroke: #9900ff;
+  color: #9900ff;
+}
+.red {
+  stroke: #ff3300;
+  color: #ff3300;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Čip */
+.chip-body {
+  rx: 20;
+  ry: 20;
+}
+
+/* Text uvnitř čipu */
+.chip-text {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Piny */
+.chip-pin {
+  stroke: #444;
+  stroke-width: 0.5;
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.6));
+}
+
+
+/* Terminal container */
+.terminal1 {
+  background-color: #00000062;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 26rem;
+  font-family: monospace;
+  position: absolute;
+  right:5%;
+  top:6%;
+
+
+}
+
+
+/* Header bar */
+.terminal1-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Traffic lights */
+.traffic-lights {
+  display: flex;
+  gap: 0.5rem;
+  color: #ef4444;
+}
+
+.traffic-lights div {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+}
+
+.red {
+  background-color: #ef4444;
+}
+
+.yellow {
+  background-color: #facc15;
+}
+
+.green {
+  background-color: #22c55e;
+}
+
+/* Label */
+.terminal1-label {
+  font-size: 0.875rem;
+}
+
+/* Terminal output */
+.terminal1-body {
+  margin-top: 1rem;
+}
+
+.terminal1-body p {
+  margin: 0.25rem 0;
+}
+
+.command {
+  color: #4ade80;
+}
+
+.output {
+  color: #fff;
+}
